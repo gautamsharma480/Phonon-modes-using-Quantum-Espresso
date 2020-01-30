@@ -1,3 +1,4 @@
+## Feel free to contact me at gautam480@gmail.com
 import numpy as np
 import os  
 os.system('sh run.sh')
