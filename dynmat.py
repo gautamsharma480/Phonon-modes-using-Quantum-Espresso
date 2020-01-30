@@ -1,10 +1,11 @@
-#### In case any problem you face while running the code, please contact me at gautam480@gmail.com
 import numpy as np
 import os  
 os.system('sh run.sh')
-natoms = 8
+print('Please provide the number of atoms in your system')
+natoms = int(input(''))
+#natoms = 8
 nmodes = natoms*3
-g1 = np.loadtxt('scf2.in')
+g1 = np.loadtxt('atomic_coordinates.dat')
 print('ANIMSTEPS'+'   '+str(nmodes))
 print('CRYSTAL')
 print('PRIMVEC')
@@ -21,7 +22,7 @@ print('PRIMCOORD  1')
 print(str(natoms)+'  1')
 
 def call_me(natoms):
-	names = np.loadtxt('scf1.in', dtype = 'str')
+	names = np.loadtxt('names_of_atoms.dat', dtype = 'str')
 	##print(names[0][2:4])
 	natoms = 8  
 	#n = range(0,3*natoms+1) # 51*3 = 153+1 
